@@ -2,4 +2,4 @@
 
 ## Good to know
 
-— No image optimisation (gifsicle / jpegtran / optipng / svgo / imageminPngquant / imageminJpegRecompress)
+-   No image optimisation (gifsicle / jpegtran / optipng / svgo / imageminPngquant / imageminJpegRecompress)
