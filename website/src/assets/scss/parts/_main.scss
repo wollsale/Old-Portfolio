@@ -1,0 +1,11 @@
+main {
+    .homepage & {
+        @include mq(mobile) {
+            padding-top: 0rem;
+        }
+    }
+
+    @include mq(mobile) {
+        padding-top: 5rem;
+    }
+}

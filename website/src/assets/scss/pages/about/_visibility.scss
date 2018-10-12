@@ -1,0 +1,91 @@
+$EASING_BOUNCE_VALUE : cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$EASING_VALUE : cubic-bezier(0.215, 0.61, 0.355, 1);
+$EASING_VALUE_REVERSE : cubic-bezier(0.47, 0, 0.745, 0.715);
+
+.js-modal {
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity .3s linear .3s, transform .1s linear 1s;
+
+    &--is-open {
+        opacity: 1;
+        pointer-events: auto;
+
+        transition: all .5s $EASING_VALUE;
+    }
+}
+
+
+body {
+    &.js-no-scroll {
+        max-height: 100%;
+        overflow: hidden;
+        position: relative;
+    }
+}
+
+
+.about__wrapper {
+    transform: translateY(3rem);
+
+    .about__content {
+        >* {
+            transform: translateY(15rem) matrix3d(0.97, 0.26, 0.00, 0, -0.26, 0.97, 0.00, 0.001, 0, 0, 1, 0, 0, 0, 0, 1);
+            opacity: 0;
+            transition: transform .5s $EASING_VALUE_REVERSE, opacity .5s linear 2s;
+
+            @for $i from 0 to 10 {
+                &:nth-child(#{$i}) {
+                    transition-delay: calc(#{$i}s / 15);
+                }
+            }
+        }
+    }
+
+    &.js-modal--is-open {
+        transform: translateY(0rem);
+
+        .about__content {
+            >* {
+                transform: translateY(0) matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+                opacity: 1;
+                transition: all 1s $EASING_VALUE;
+
+                @for $i from 0 to 10 {
+                    &:nth-child(#{$i}) {
+                        transition-delay: calc(#{$i}s / 10);
+                    }
+                }
+            }
+        }
+
+        .about__close {
+            transform: scale(1);
+        }
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(15rem) matrix3d(0.97, 0.26, 0.00, 0, -0.26, 0.97, 0.00, 0.001, 0, 0, 1, 0, 0, 0, 0, 1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: matrix3d(1, 0, 0.00, 0, 0.00, 1, 0.00, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

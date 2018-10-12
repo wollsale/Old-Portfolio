@@ -1,0 +1,139 @@
+@import "visibility";
+
+.about {
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        height: 100%;
+
+        background: #EEF5FF;
+
+        z-index: 10;
+    }
+
+    &__border {
+        border: 1rem solid #fff;
+        height: 100vh;
+
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        @include mq(desktop) {
+            border-width: 4rem;
+        }
+    }
+
+    &__content {
+        margin: 12rem auto;
+
+        color: $blue;
+
+        @include mq(mobile) {
+            padding: 2rem;
+        }
+
+        * {
+            color: inherit;
+
+            @include mq(desktop) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+}
+
+.about__content {
+    * {
+        margin: 0 auto;
+    }
+
+    p,
+    h2,
+    h3,
+    small,
+    ul {
+        max-width: 53.4rem;
+    }
+
+    p+p {
+        margin-top: 4rem;
+    }
+
+    h2 {
+        font-family: $serif;
+        font-size: 2.4rem;
+        text-align: center;
+        font-weight: 500;
+
+        &::before {
+            display: block;
+            content: '👋🏻';
+            margin-bottom: 1rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+    }
+
+    img {
+        display: block;
+        max-width: 80rem;
+        width: 100%;
+
+        @include mq(mobile) {
+            max-width: 40rem;
+        }
+    }
+
+    ul+ul {
+        margin-top: 4rem;
+    }
+
+    ul li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 3rem;
+
+        &::before {
+            display: block;
+            content: '—';
+            position: absolute;
+            left: 0rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+.about {
+    &__close {
+        z-index: 1;
+
+        position: fixed;
+        top: 3rem;
+        right: 3rem;
+
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background: $blue;
+
+        &::before {
+            z-index: 0;
+            position: fixed;
+            display: block;
+            content: '✕';
+            top: .5rem;
+            left: .9rem;
+            color: #fff;
+        }
+    }
+}

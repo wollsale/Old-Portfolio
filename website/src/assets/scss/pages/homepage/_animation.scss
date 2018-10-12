@@ -1,0 +1,26 @@
+$INITIAL_VALUE : 8rem;
+$EASING_VALUE : cubic-bezier(0.23, 1, 0.32, 1);
+
+.projects__item {
+    // transform: translateX($INITIAL_VALUE);
+    // opacity: 0;
+
+    // @for $i from 1 to 5 {
+    //     &:nth-child(#{$i}) {
+    //         animation: projectsAppear 4s $EASING_VALUE forwards;
+    //         animation-delay: calc(1s + #{$i/4}s);
+    //     }
+    // }
+}
+
+@keyframes projectsAppear {
+    from {
+        opacity: 0;
+        transform: translateX($INITIAL_VALUE);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}

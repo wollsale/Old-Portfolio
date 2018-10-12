@@ -1,0 +1,62 @@
+// imports
+@import 'job';
+@import 'icons';
+
+.button {
+    @extend %uppercase;
+
+    font-size: 1rem;
+
+    text-align: center;
+    padding: 1rem 1.5rem;
+    justify-content: center;
+}
+
+.button {
+    &--primary {
+        $backgroundColor: #EEF5FF;
+        $color: $blue;
+        $borderColor: $backgroundColor;
+
+        background-color: $backgroundColor;
+        color: $blue;
+        // border: 1px solid darken($borderColor, 2%);
+
+        &::before {
+            width: 1.6rem;
+            height: 1.3rem;
+            margin-right: 1.5rem;
+        }
+    }
+
+    &--secondary {
+        font-size: .8rem;
+        background: $lightGrey;
+        padding: .8rem 1.1rem;
+
+        &::before {
+            width: 1.3rem;
+            height: 1rem;
+            margin-right: .8rem;
+        }
+    }
+}
+
+.button {
+    &--icon {
+        display: inline-flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include mq(mobile) {
+            border-radius: .3rem;
+        }
+
+        &::before {
+            display: block;
+            content: '';
+
+            @extend %backgroundCover;
+        }
+    }
+}

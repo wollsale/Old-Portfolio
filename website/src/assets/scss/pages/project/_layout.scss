@@ -1,0 +1,110 @@
+.project {
+    &__descr {
+        max-width: 80rem;
+        width: 100%;
+        margin: 0 auto;
+
+        section+section {
+            margin-top: 25rem;
+
+            @include mq(desktop) {
+                margin-top: 50rem;
+            }
+        }
+
+        img,
+        picture {
+            display: block;
+            width: 100%;
+        }
+
+        img+img,
+        img+picture,
+        picture+picture,
+        picture+img,
+        img+div,
+        picture+div {
+            margin-top: 5rem;
+
+            @include mq(desktop) {
+                margin-top: 15rem;
+            }
+        }
+    }
+}
+
+.project {
+    &__descr {
+        color: $darkGrey;
+
+        @include mq(mobile) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        * {
+            color: inherit;
+        }
+
+        p {
+            max-width: 54rem;
+            text-align: center;
+            margin: 10rem auto;
+            line-height: 180%;
+
+            @include mq(desktop) {
+                font-size: 2.1rem;
+                margin: 25rem auto;
+            }
+        }
+
+    }
+}
+
+
+.project {
+    &__web {
+        display: flex;
+        flex-direction: column;
+
+        @include mq(desktop) {
+            flex-direction: row;
+
+            >* {
+                margin-top: 0 !important;
+
+                &:nth-child(2n) {
+                    margin-left: 2rem;
+                }
+            }
+
+
+            &--desktop {
+                flex-basis: 80%;
+            }
+
+            &--mobile {
+                flex-basis: 20%;
+            }
+        }
+
+        &--mobile {
+            max-width: 15.6rem;
+
+            @include mq(mobile) {
+                margin: 0 auto;
+            }
+        }
+
+        &+& {
+            margin-top: 15rem;
+        }
+
+        .mobile {
+            // max-height: 80vh;
+            // overflow: scroll;
+            // position: relative;
+        }
+    }
+
+}

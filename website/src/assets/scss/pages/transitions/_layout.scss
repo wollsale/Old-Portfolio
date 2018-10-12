@@ -1,0 +1,67 @@
+@import 'homepage';
+
+$EASING_VALUE : cubic-bezier(0.215, 0.61, 0.355, 1);
+$TIMING_VALUE : .7s;
+
+.transition {
+    &__wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+
+        display: flex;
+        pointer-events: none;
+    }
+
+    &__panels {
+        width: calc(100% / 6);
+        height: 100%;
+        background: rgba(#EEF5FF, 1);
+
+        animation: transitionPanel $TIMING_VALUE $EASING_VALUE forwards;
+
+        body.js-pageInTransition & {
+            height: 0%;
+            animation: transitionPanelReverse $TIMING_VALUE $EASING_VALUE forwards;
+
+            @for $a from 0 to 7 {
+                &:nth-child(#{$a}) {
+                    animation-delay: calc(.0s + #{$a}s/10);
+                }
+            }
+        }
+
+        @for $i from 0 to 7 {
+            &:nth-child(#{$i}) {
+                animation-delay: calc(.0s + #{$i}s/10);
+            }
+        }
+
+        @include mq(mobile) {
+            display: none;
+        }
+    }
+}
+
+@keyframes transitionPanel {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0%;
+    }
+}
+
+@keyframes transitionPanelReverse {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}

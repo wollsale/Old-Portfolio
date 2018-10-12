@@ -1,0 +1,51 @@
+// Variables
+$sansSerif : "IBM Plex Sans";
+$serif : "IBM Plex Serif";
+
+// Imports
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,500,500i|IBM+Plex+Serif:300,300i,400,400i,500,500i');
+
+
+// Base
+:root {
+    font-size: 9px;
+
+    @include mq(desktop) {
+        font-size: 10px;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+// Styles
+h1 {
+    font-size: 2.4rem;
+    color: $titleColor;
+}
+
+// Font Family
+h1 {
+    font-family: $serif;
+}
+
+h2,
+h3,
+h4,
+p,
+small,
+a,
+ul {
+    font-family: $sansSerif;
+    color: $textColor;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+small {
+    line-height: 1.5;
+}

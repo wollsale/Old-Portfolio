@@ -1,0 +1,10 @@
+@import "projectList";
+@import "animation";
+
+.homepage {
+    main {
+        @include mq(mobile) {
+            height: 30%;
+        }
+    }
+}

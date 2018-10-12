@@ -1,0 +1,225 @@
+.projects__list {
+    height: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 2rem;
+
+    @include mq(mobile) {
+        flex-wrap: nowrap;
+        overflow: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    @include mq(desktop) {
+        margin: 0 auto;
+        max-width: 124rem;
+
+        >* {
+            flex: 0 0 calc(50% - 2rem);
+            width: calc(50% - 2rem);
+        }
+    }
+}
+
+.projects__item {
+    @include mq(mobile) {
+        min-width: 70%;
+        margin-right: 2rem;
+    }
+
+    @include mq(desktop) {
+        &:nth-child(2n + 1) {
+            margin-right: 4rem;
+        }
+
+        &:nth-last-child(n+2) {
+            margin-bottom: 4rem;
+        }
+
+        &:nth-child(2n) {
+            transform: translateY(8rem);
+        }
+    }
+}
+
+.projects__link {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    padding: 2rem;
+    border-radius: .3rem;
+    background: attr('data-color');
+
+    @include mq(desktop) {
+        padding: 4rem 4rem 0 4rem;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    * {
+        color: inherit;
+    }
+}
+
+// Style
+.projects {
+    &__title {
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-bottom: auto;
+        z-index: 10;
+
+        @include mq(desktop) {
+            font-size: 1.4rem;
+            margin-bottom: .4rem;
+        }
+    }
+
+    &__tags {
+        font-size: 1rem;
+        z-index: 10;
+
+        @include mq(desktop) {
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__tag {
+        @include mq(desktop) {
+            display: inline-block;
+
+            &:not(:first-child) {
+                position: relative;
+                margin-left: 2rem;
+
+                &::before {
+                    display: block;
+                    content: '+';
+                    position: absolute;
+                    left: -1.4rem;
+                }
+            }
+        }
+    }
+}
+
+// Colors
+.projects__item:first-child .projects__link {
+    --projectItem-background: #DFDCD1;
+    background: #DFDCD1;
+    color: #8B8469;
+}
+
+.projects__item:nth-child(2) .projects__link {
+    --projectItem-background: #D8DFE8;
+    background: #D8DFE8;
+    color: #68788D;
+}
+
+.projects__item:nth-child(3) .projects__link {
+    --projectItem-background: #59575C;
+    background: #59575C;
+    color: #FFFFFF;
+}
+
+.projects__item:nth-child(4) .projects__link {
+    --projectItem-background: #ECECEC;
+    background: #ECECEC;
+    color: #68788D;
+}
+
+.projects__item:nth-child(5) .projects__link {
+    --projectItem-background: #D0E4FF;
+    background: #D0E4FF;
+    color: #2F80ED;
+}
+
+// Fake Padding
+.projects__item:last-child {
+    @include mq(mobile) {
+        display: flex;
+
+        &::after {
+            display: block;
+            content: '';
+            width: 2rem;
+        }
+    }
+}
+
+
+// Imgs
+.projects {
+    &__imgs {
+        position: relative;
+
+        @include mq(mobile) {
+            display: none;
+        }
+
+        @include mq(desktop) {
+            margin-top: auto;
+        }
+    }
+
+    &__img {
+        box-shadow: 0 1rem 3rem rgba(#000, .1);
+        pointer-events: none;
+
+        >img {
+            width: 100%;
+        }
+
+        &--desktop {
+            max-width: calc(100% - 1rem);
+            vertical-align: bottom;
+        }
+
+        &--mobile {
+            max-width: 15rem;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            top: 4rem;
+        }
+    }
+}
+
+
+// Hover
+@include mq(desktop) {
+    .projects__link {
+        &::after {
+            display: block;
+            content: '';
+            width: 100%;
+            height: 80%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+            z-index: 0;
+            transition: opacity .2s ease-out;
+            background: linear-gradient(to top, var(--projectItem-background), rgba(#fff, 0));
+            opacity: .3;
+            transition: all .3s ease-out;
+        }
+    }
+
+    .projects__link {
+        &:hover {
+            &::after {
+                opacity: .5;
+            }
+        }
+    }
+}

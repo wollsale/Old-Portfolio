@@ -1,0 +1,13 @@
+.button {
+    &--job {
+        &::before {
+            background-image: url("../../../assets/img/icons/i-job.svg");
+        }
+    }
+
+    &--external {
+        &::before {
+            background-image: url("../../../assets/img/icons/i-external.svg");
+        }
+    }
+}

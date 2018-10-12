@@ -1,0 +1,89 @@
+/*
+* ======================================================
+* PROJECTS ITEM
+* ======================================================
+*/
+
+$EASING_VALUE : cubic-bezier(0.215, 0.61, 0.355, 1);
+$TIMING_VALUE : 1.5s;
+
+.projects {
+    &__item {
+        @include mq(desktop) {
+            opacity: 0;
+            animation: projectsFadeIn $TIMING_VALUE $EASING_VALUE forwards;
+
+            &:not(:nth-child(2n)) {
+                transform: translateY(12rem);
+                animation: projectsFadeIn $TIMING_VALUE $EASING_VALUE forwards;
+            }
+
+            &:nth-child(2n) {
+                transform: translateY(20rem);
+                animation: projectsFadeInEven $TIMING_VALUE $EASING_VALUE forwards;
+            }
+
+            @for $i from 0 to 5 {
+                &:nth-child(#{$i}) {
+                    animation-delay: calc(.3s + #{$i}s/5);
+                }
+            }
+        }
+    }
+}
+
+@keyframes projectsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes projectsFadeInEven {
+    from {
+        opacity: 0;
+        transform: translateY(20rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(8rem);
+    }
+}
+
+
+/*
+* ======================================================
+* HEADER
+* ======================================================
+*/
+
+.header {
+    &__content * {
+        @include mq(desktop) {
+            transform: scale(1.1);
+            animation: headerFadeIn 1.3s $EASING_VALUE forwards;
+
+            @for $i from 1 to 4 {
+                &:nth-child(#{$i}) {
+                    animation-delay: calc(.2s + #{$i}s / 8);
+                }
+            }
+        }
+    }
+}
+
+@keyframes headerFadeIn {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}

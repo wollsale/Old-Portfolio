@@ -1,0 +1,8 @@
+.hidden {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    overflow: 0;
+    pointer-events: none;
+    max-height: 0;
+}

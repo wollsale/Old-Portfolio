@@ -1,0 +1,13 @@
+%backgroundCover {
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+// Type
+%uppercase {
+    font-family: $sansSerif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
