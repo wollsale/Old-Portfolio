@@ -161,6 +161,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
         __webpack_require__.r(__webpack_exports__);
         var isDesktop = function () {
+            // 900
             if (document.documentElement.clientWidth >= 900) return true;
         }();
 
