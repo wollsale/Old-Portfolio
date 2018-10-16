@@ -1,4 +1,4 @@
-RewriteEngine on
+<!-- RewriteEngine on
 Rewritecond %{HTTP_HOST} ^alexiswollseifen.com
 Rewritecond %{REQUEST_URI} !^/website/dist
-Rewriterule ^(.*)$ /website/dist/
+Rewriterule ^(.*)$ /website/dist/ -->
