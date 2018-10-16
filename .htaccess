@@ -1,8 +1,4 @@
-# On vérifie que le module est chargé
-<IfModule mod_rewrite.c>
-    # On met en route le moteur de réécriture
-    RewriteEngine on
-
-    # Et on pointe vers le dossier public
-    RewriteRule ^ website/dist/ [L]
-</IfModule>
+RewriteEngine on
+Rewritecond %{HTTP_HOST} ^alexiswollseifen.com
+Rewritecond %{REQUEST_URI} !^/website/dist
+Rewriterule ^(.*)$ /website/dist/
