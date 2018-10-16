@@ -17,7 +17,6 @@ for (let i = 0; i < triggers.length; i++) {
             const id = modal.dataset.id
             if (target == id) modal.classList.add(openClass), body.classList.add(noScrollClass)
         }
-
         for (let i = 0; i < closes.length; i++) {
             const close = closes[i];
             close.addEventListener('click', (e) => {

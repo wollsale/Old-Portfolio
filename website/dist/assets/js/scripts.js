@@ -229,7 +229,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                     var id = modal.dataset.id;
                     if (target == id) modal.classList.add(openClass), body.classList.add(noScrollClass);
                 }
-
                 for (var _i2 = 0; _i2 < closes.length; _i2++) {
                     var close = closes[_i2];
                     close.addEventListener('click', function (e) {
