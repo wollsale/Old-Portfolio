@@ -1,0 +1,66 @@
+.about__wrapper {
+    * {
+        margin: 0 auto;
+    }
+
+    p,
+    h2,
+    h3,
+    small,
+    ul {
+        max-width: 53.4rem;
+    }
+
+    p+p {
+        margin-top: 4rem;
+    }
+
+    h2 {
+        font-family: $serif;
+        font-size: 2.4rem;
+        text-align: center;
+        font-weight: 500;
+
+        &::before {
+            display: block;
+            content: '👋🏻';
+            margin-bottom: 1rem;
+        }
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-top: 10rem;
+        margin-bottom: 3rem;
+    }
+
+    img {
+        display: block;
+        max-width: 80rem;
+        width: 100%;
+
+        @include mq(mobile) {
+            max-width: 40rem;
+        }
+    }
+
+    ul+ul {
+        margin-top: 4rem;
+    }
+
+    ul li {
+        margin-bottom: 1rem;
+        position: relative;
+        padding-left: 3rem;
+
+        &::before {
+            display: block;
+            content: '—';
+            position: absolute;
+            left: 0rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

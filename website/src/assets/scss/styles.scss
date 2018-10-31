@@ -31,26 +31,14 @@
 */
 
 .sandbox {
-    header {
-        height: 60rem;
-        background: #eee;
-    }
+    h1 span {
+        display: block;
+        font-size: 24vmax;
+        text-align: center;
+        line-height: .9;
 
-    footer {
-        height: 50rem;
-        background: #eee;
-    }
-
-    main {
-        width: 100%;
-        max-width: 120rem;
-        margin: 0 auto;
-
-
-        .js-contrast {
-            border: 1px solid red;
-            height: 200rem;
-            margin-top: 20rem;
+        &:last-child {
+            font-size: 35vmax;
         }
     }
 }

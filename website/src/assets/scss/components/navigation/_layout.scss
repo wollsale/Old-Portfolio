@@ -7,7 +7,8 @@ $CONTENT_COLOR : $blue;
     justify-content: flex-end;
 
     height: auto;
-    background: $BORDER_COLOR;
+    border-top: 1px solid $BORDER_COLOR;
+    background: #fff;
 
     &--last {
         justify-content: flex-start;
@@ -30,8 +31,6 @@ $CONTENT_COLOR : $blue;
     @include mq(desktop) {
         height: 15rem;
         flex-direction: row;
-        border-top: 1px solid $BORDER_COLOR;
-        background: #fff;
     }
 
     &__item {
@@ -45,7 +44,10 @@ $CONTENT_COLOR : $blue;
         align-items: center;
 
         height: 100%;
-        padding: 0rem;
+
+        @include mq(mobile) {
+            padding: 1rem;
+        }
 
         color: $CONTENT_COLOR;
 
@@ -88,9 +90,8 @@ $CONTENT_COLOR : $blue;
     }
 
     &__item:last-child {
-        text-align: right;
-
         @include mq(desktop) {
+            text-align: right;
             border-left: 1px solid $BORDER_COLOR;
         }
 

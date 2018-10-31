@@ -1,9 +1,11 @@
+import isDesktop from './helpers/isDesktop'
+
 const cursorHandling = () => {
 
     const myCursor = document.querySelector('.js-cursor')
     const myCursorCircle = document.querySelector('.js-cursor > circle')
 
-    if (!myCursor) return
+    if (!myCursor || !isDesktop) return
 
     const linksArray = document.querySelectorAll('a');
 

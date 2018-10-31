@@ -1,0 +1,36 @@
+.about {
+    &__close {
+        z-index: 100;
+
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+
+        width: calc(100% - 4rem);
+        height: 4rem;
+        border-radius: .3rem .3rem;
+        background: $blue;
+
+        transform: none !important;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+        &::before {
+            z-index: 0;
+            position: absolute;
+            display: block;
+            content: '✕';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+        }
+
+        &:focus {
+            background: darken($blue, .3);
+        }
+
+        @include mq(desktop) {
+            display: none;
+        }
+    }
+}

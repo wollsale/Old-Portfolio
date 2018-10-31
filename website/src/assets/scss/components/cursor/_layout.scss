@@ -2,7 +2,9 @@ $EASING_VALUE: cubic-bezier(0.86, 0, 0.07, 1);
 
 body {
     * {
-        cursor: none !important;
+        @include mq(desktop) {
+            cursor: none !important;
+        }
     }
 }
 
@@ -10,6 +12,10 @@ body {
     position: absolute;
     z-index: 100;
     pointer-events: none;
+
+    @include mq(mobile) {
+        display: none;
+    }
 
     &__wrapper {
         position: fixed;

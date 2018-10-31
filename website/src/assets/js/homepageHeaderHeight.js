@@ -18,5 +18,10 @@ const homepageHeaderHeight = (() => {
         body.style.height = windowHeight + "px";
     }
 
+    window.addEventListener('resize', () => {
+        console.log('resizing...')
+        if (isHomepage() && !isDesktop()) headerHeight();
+    })
+
     if (isHomepage() && !isDesktop()) headerHeight();
 })();
