@@ -1,0 +1,108 @@
+$BORDER_COLOR : rgba($blue, 0.2);
+$CONTENT_COLOR : $blue;
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    height: auto;
+    background: $BORDER_COLOR;
+
+    &--last {
+        justify-content: flex-start;
+
+        li {
+            border-right: 1px solid $BORDER_COLOR;
+
+            a {
+                @include mq(desktop) {
+                    flex-direction: row !important;
+                }
+            }
+
+            svg {
+                transform: rotate(0) !important;
+            }
+        }
+    }
+
+    @include mq(desktop) {
+        height: 15rem;
+        flex-direction: row;
+        border-top: 1px solid $BORDER_COLOR;
+        background: #fff;
+    }
+
+    &__item {
+        flex: 0 0 50%;
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        height: 100%;
+        padding: 0rem;
+
+        color: $CONTENT_COLOR;
+
+        * {
+            color: inherit;
+        }
+
+        svg {
+            display: block;
+            fill: $CONTENT_COLOR;
+            height: 1rem;
+            margin-right: 2rem;
+
+            @include mq(desktop) {
+                height: 1.4rem;
+                width: 8rem;
+            }
+        }
+
+        span {
+            line-height: 2.3;
+            @extend %uppercase;
+
+            font-size: .8rem;
+
+            @include mq(desktop) {
+                font-size: 1rem;
+            }
+        }
+
+        h4 {
+            font-weight: 500;
+
+            font-size: 1.2rem;
+
+            @include mq(desktop) {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__item:last-child {
+        text-align: right;
+
+        @include mq(desktop) {
+            border-left: 1px solid $BORDER_COLOR;
+        }
+
+        .navigation__link {
+            @include mq(desktop) {
+                flex-direction: row-reverse;
+            }
+
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+}

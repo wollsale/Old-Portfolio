@@ -1,0 +1,7 @@
+@import 'lazyLoading';
+
+.js-contrast--shadowed {
+    img {
+        box-shadow: 0rem 0rem 4rem -2rem $blue;
+    }
+}

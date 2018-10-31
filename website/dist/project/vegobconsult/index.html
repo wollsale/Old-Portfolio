@@ -15,12 +15,15 @@
 
     <!-- HEADER -->
     <header class="header">
-        <a href="../../index.html" title="Retour à l'accueil" class="header__back" data-transition><span class="hidden">Retour
-                à
-                l'accueil</span></a>
+        <a href="../../index.html" title="Retour à l'accueil" class="header__back" data-transition>
+            <span class="hidden">Retour à l'accueil</span>
+            <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09589 9L8.73629 14.5032C9.08725 14.8456 9.08725 15.4008 8.73629 15.7432C8.38533 16.0856 7.8163 16.0856 7.46534 15.7432L0.263283 8.71637C0.062644 8.52061 -0.0232934 8.25532 0.00547098 8C-0.0232934 7.74468 0.0626441 7.47939 0.263284 7.28363L7.46534 0.256817C7.8163 -0.0856069 8.38533 -0.0856068 8.73629 0.256817C9.08725 0.599241 9.08725 1.15442 8.73629 1.49684L3.09589 7L17.9995 7C18.5518 7 18.9995 7.44772 18.9995 8C18.9995 8.55228 18.5518 9 17.9995 9L3.09589 9Z" />
+            </svg>
+        </a>
         <div class="header__content">
             <h1 class="header__name">Vegob Consult</h1>
-            <a href="#" class="header__cta button button--secondary button--icon button--external">
+            <a href="http://www.vegobconsult.be" class="header__cta button button--secondary button--icon button--external">
                 www.vegobconsult.be
             </a>
         </div>
@@ -33,11 +36,11 @@
                 <!-- Visuel #1 -->
                 <img src="../../assets/img/project-3/vis-1.svg" alt="">
                 <!-- Introduction -->
-                <p>Vegob Consult est bureau de dessin en architecture, stabilité et techniques spéciales basé
+                <!-- <p>Vegob Consult est bureau de dessin en architecture, stabilité et techniques spéciales basé
                     en
                     Belgique. J’ai été sollicité de leur part pour leur produire un logo ainsi qu’un site vitrine
                     répondant
-                    aux habitudes actuelles des utilisateurs.</p>
+                    aux habitudes actuelles des utilisateurs.</p> -->
             </header>
             <section>
                 <!-- Visuel #2 -->
@@ -81,7 +84,44 @@
         </article>
     </main>
 
+    <!-- FOOTER -->
     <footer>
+        <!-- Navigation -->
+        <ul class="navigation">
+            <li class="navigation__item">
+                <a href="../agmetaldesign/index.html" class="navigation__link" data-transition>
+                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09589 9L8.73629 14.5032C9.08725 14.8456 9.08725 15.4008 8.73629 15.7432C8.38533 16.0856 7.8163 16.0856 7.46534 15.7432L0.263283 8.71637C0.062644 8.52061 -0.0232934 8.25532 0.00547098 8C-0.0232934 7.74468 0.0626441 7.47939 0.263284 7.28363L7.46534 0.256817C7.8163 -0.0856069 8.38533 -0.0856068 8.73629 0.256817C9.08725 0.599241 9.08725 1.15442 8.73629 1.49684L3.09589 7L17.9995 7C18.5518 7 18.9995 7.44772 18.9995 8C18.9995 8.55228 18.5518 9 17.9995 9L3.09589 9Z" />
+                    </svg>
+                    <div>
+                        <span>Projet précédent</span>
+                        <h4>AG Metal Design</h4>
+                    </div>
+                </a>
+            </li>
+            <li class="navigation__item">
+                <a href="../cinemacameo/index.html" class="navigation__link" data-transition>
+                    <svg width="19" height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.09589 9L8.73629 14.5032C9.08725 14.8456 9.08725 15.4008 8.73629 15.7432C8.38533 16.0856 7.8163 16.0856 7.46534 15.7432L0.263283 8.71637C0.062644 8.52061 -0.0232934 8.25532 0.00547098 8C-0.0232934 7.74468 0.0626441 7.47939 0.263284 7.28363L7.46534 0.256817C7.8163 -0.0856069 8.38533 -0.0856068 8.73629 0.256817C9.08725 0.599241 9.08725 1.15442 8.73629 1.49684L3.09589 7L17.9995 7C18.5518 7 18.9995 7.44772 18.9995 8C18.9995 8.55228 18.5518 9 17.9995 9L3.09589 9Z" />
+                    </svg>
+                    <div>
+                        <span>Projet suivant</span>
+                        <h4>Cinéma Caméo</h4>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!-- Cursor -->
+        <div class="cursor__wrapper">
+            <div class="cursor js-cursor">
+                <div class="cursor__main"></div>
+                <div class="cursor__hover"></div>
+                <div>
+                    <div class="cursor__close cursor__close--top"></div>
+                    <div class="cursor__close cursor__close--bottom"></div>
+                </div>
+            </div>
+        </div>
         <div class="transition__wrapper">
             <div class="transition__panels"></div>
             <div class="transition__panels"></div>
@@ -90,7 +130,6 @@
             <div class="transition__panels"></div>
             <div class="transition__panels"></div>
         </div>
-        <small>COPYRIGHT © alexiswollseifen.com — 2018</small>
     </footer>
 
     <!-- SCRIPTS -->

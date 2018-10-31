@@ -13,6 +13,7 @@ export const pageTransition = (() => {
 
         el.addEventListener('click', (e) => {
             e.preventDefault();
+            e.stopImmediatePropagation();
             body.classList.contains(transitionClass) ? body.classList.remove(transitionClass) : body.classList.add(transitionClass);
 
             setTimeout(() => {

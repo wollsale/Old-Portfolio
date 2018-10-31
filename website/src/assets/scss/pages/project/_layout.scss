@@ -30,6 +30,10 @@
                 margin-top: 15rem;
             }
         }
+
+        .project__web+picture {
+            margin-top: 15rem;
+        }
     }
 }
 
@@ -46,15 +50,29 @@
             color: inherit;
         }
 
+        header {
+            margin-bottom: 10rem;
+
+            @include mq(desktop) {
+                margin-bottom: 25rem;
+            }
+
+            p {
+                margin: 10rem auto 0;
+
+                @include mq(desktop) {
+                    margin: 25rem auto 0;
+                }
+            }
+        }
+
         p {
             max-width: 54rem;
             text-align: center;
-            margin: 10rem auto;
             line-height: 180%;
 
             @include mq(desktop) {
                 font-size: 2.1rem;
-                margin: 25rem auto;
             }
         }
 
@@ -98,12 +116,6 @@
 
         &+& {
             margin-top: 15rem;
-        }
-
-        .mobile {
-            // max-height: 80vh;
-            // overflow: scroll;
-            // position: relative;
         }
     }
 

@@ -1,6 +1,11 @@
 // Layout
 
 .header {
+    body:not(.homepage) & {
+        background: rgba($lightBlue, .5);
+        margin-bottom: 15rem;
+    }
+
     .homepage & {
         @include mq(mobile) {
             height: 70%;
@@ -74,11 +79,13 @@
         position: fixed;
         top: 2rem;
         left: 2rem;
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
 
-        background-image: url('../../assets/img/icons/i-home.svg');
-        @extend %backgroundCover;
+        svg {
+            fill: $blue;
+            width: 100%;
+        }
     }
 }
 

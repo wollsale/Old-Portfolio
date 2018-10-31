@@ -13,8 +13,10 @@
 }
 
 .button {
-    &--primary {
-        $backgroundColor: #EEF5FF;
+
+    &--primary,
+    &--secondary {
+        $backgroundColor: $lightBlue;
         $color: $blue;
         $borderColor: $backgroundColor;
 
@@ -31,7 +33,7 @@
 
     &--secondary {
         font-size: .8rem;
-        background: $lightGrey;
+        // background: $lightGrey;
         padding: .8rem 1.1rem;
 
         &::before {

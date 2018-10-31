@@ -1,0 +1,9 @@
+img {
+    opacity: 1 !important;
+    transition: all 2s;
+}
+
+img[data-src] {
+    min-height: 60rem;
+    opacity: 0;
+}
