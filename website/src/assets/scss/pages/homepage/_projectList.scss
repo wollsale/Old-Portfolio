@@ -216,10 +216,15 @@
     }
 
     .projects__link {
+        transition: all .3s ease-out;
+
         &:hover {
             &::after {
                 opacity: .7;
             }
+
+            box-shadow: 0rem 1rem 7rem -2.3rem rgba(#000, .6);
+            transform: translate(0, -.3rem);
         }
     }
 }

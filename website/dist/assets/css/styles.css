@@ -702,8 +702,18 @@ footer {
     -webkit-transition: all .3s ease-out;
     -o-transition: all .3s ease-out;
     transition: all .3s ease-out; }
-  .projects__link:hover::after {
-    opacity: .7; } }
+  .projects__link {
+    -webkit-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out; }
+    .projects__link:hover {
+      -webkit-box-shadow: 0rem 1rem 7rem -2.3rem rgba(0, 0, 0, 0.6);
+      box-shadow: 0rem 1rem 7rem -2.3rem rgba(0, 0, 0, 0.6);
+      -webkit-transform: translate(0, -0.3rem);
+      -ms-transform: translate(0, -0.3rem);
+      transform: translate(0, -0.3rem); }
+      .projects__link:hover::after {
+        opacity: .7; } }
 
 @-webkit-keyframes projectsAppear {
   from {
@@ -753,7 +763,7 @@ body.js-no-scroll {
   -webkit-transform: translateY(3rem);
   -ms-transform: translateY(3rem);
   transform: translateY(3rem); }
-  .about__wrapper .about__content > * {
+  .about__wrapper .about__content > * > * {
     -webkit-transform: translateY(15rem) matrix3d(0.97, 0.26, 0, 0, -0.26, 0.97, 0, 0.001, 0, 0, 1, 0, 0, 0, 0, 1);
     transform: translateY(15rem) matrix3d(0.97, 0.26, 0, 0, -0.26, 0.97, 0, 0.001, 0, 0, 1, 0, 0, 0, 0, 1);
     opacity: 0;
@@ -762,43 +772,43 @@ body.js-no-scroll {
     -o-transition: transform 0.5s cubic-bezier(0.47, 0, 0.745, 0.715), opacity 0.5s linear 2s;
     transition: transform 0.5s cubic-bezier(0.47, 0, 0.745, 0.715), opacity 0.5s linear 2s;
     transition: transform 0.5s cubic-bezier(0.47, 0, 0.745, 0.715), opacity 0.5s linear 2s, -webkit-transform 0.5s cubic-bezier(0.47, 0, 0.745, 0.715); }
-    .about__wrapper .about__content > *:nth-child(0) {
+    .about__wrapper .about__content > * > *:nth-child(0) {
       -webkit-transition-delay: -webkit-calc(0s / 15);
       -o-transition-delay: calc(0s / 15);
       transition-delay: calc(0s / 15); }
-    .about__wrapper .about__content > *:nth-child(1) {
+    .about__wrapper .about__content > * > *:nth-child(1) {
       -webkit-transition-delay: -webkit-calc(1s / 15);
       -o-transition-delay: calc(1s / 15);
       transition-delay: calc(1s / 15); }
-    .about__wrapper .about__content > *:nth-child(2) {
+    .about__wrapper .about__content > * > *:nth-child(2) {
       -webkit-transition-delay: -webkit-calc(2s / 15);
       -o-transition-delay: calc(2s / 15);
       transition-delay: calc(2s / 15); }
-    .about__wrapper .about__content > *:nth-child(3) {
+    .about__wrapper .about__content > * > *:nth-child(3) {
       -webkit-transition-delay: -webkit-calc(3s / 15);
       -o-transition-delay: calc(3s / 15);
       transition-delay: calc(3s / 15); }
-    .about__wrapper .about__content > *:nth-child(4) {
+    .about__wrapper .about__content > * > *:nth-child(4) {
       -webkit-transition-delay: -webkit-calc(4s / 15);
       -o-transition-delay: calc(4s / 15);
       transition-delay: calc(4s / 15); }
-    .about__wrapper .about__content > *:nth-child(5) {
+    .about__wrapper .about__content > * > *:nth-child(5) {
       -webkit-transition-delay: -webkit-calc(5s / 15);
       -o-transition-delay: calc(5s / 15);
       transition-delay: calc(5s / 15); }
-    .about__wrapper .about__content > *:nth-child(6) {
+    .about__wrapper .about__content > * > *:nth-child(6) {
       -webkit-transition-delay: -webkit-calc(6s / 15);
       -o-transition-delay: calc(6s / 15);
       transition-delay: calc(6s / 15); }
-    .about__wrapper .about__content > *:nth-child(7) {
+    .about__wrapper .about__content > * > *:nth-child(7) {
       -webkit-transition-delay: -webkit-calc(7s / 15);
       -o-transition-delay: calc(7s / 15);
       transition-delay: calc(7s / 15); }
-    .about__wrapper .about__content > *:nth-child(8) {
+    .about__wrapper .about__content > * > *:nth-child(8) {
       -webkit-transition-delay: -webkit-calc(8s / 15);
       -o-transition-delay: calc(8s / 15);
       transition-delay: calc(8s / 15); }
-    .about__wrapper .about__content > *:nth-child(9) {
+    .about__wrapper .about__content > * > *:nth-child(9) {
       -webkit-transition-delay: -webkit-calc(9s / 15);
       -o-transition-delay: calc(9s / 15);
       transition-delay: calc(9s / 15); }
@@ -806,50 +816,50 @@ body.js-no-scroll {
     -webkit-transform: none;
     -ms-transform: none;
     transform: none; }
-    .about__wrapper.js-modal--is-open .about__content > * {
+    .about__wrapper.js-modal--is-open .about__content > * > * {
       -webkit-transform: translateY(0) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       transform: translateY(0) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
       opacity: 1;
       -webkit-transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
       -o-transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
       transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(0) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(0) {
         -webkit-transition-delay: -webkit-calc(.5s + 0s / 10);
         -o-transition-delay: calc(.5s + 0s / 10);
         transition-delay: calc(.5s + 0s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(1) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(1) {
         -webkit-transition-delay: -webkit-calc(.5s + 1s / 10);
         -o-transition-delay: calc(.5s + 1s / 10);
         transition-delay: calc(.5s + 1s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(2) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(2) {
         -webkit-transition-delay: -webkit-calc(.5s + 2s / 10);
         -o-transition-delay: calc(.5s + 2s / 10);
         transition-delay: calc(.5s + 2s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(3) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(3) {
         -webkit-transition-delay: -webkit-calc(.5s + 3s / 10);
         -o-transition-delay: calc(.5s + 3s / 10);
         transition-delay: calc(.5s + 3s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(4) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(4) {
         -webkit-transition-delay: -webkit-calc(.5s + 4s / 10);
         -o-transition-delay: calc(.5s + 4s / 10);
         transition-delay: calc(.5s + 4s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(5) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(5) {
         -webkit-transition-delay: -webkit-calc(.5s + 5s / 10);
         -o-transition-delay: calc(.5s + 5s / 10);
         transition-delay: calc(.5s + 5s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(6) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(6) {
         -webkit-transition-delay: -webkit-calc(.5s + 6s / 10);
         -o-transition-delay: calc(.5s + 6s / 10);
         transition-delay: calc(.5s + 6s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(7) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(7) {
         -webkit-transition-delay: -webkit-calc(.5s + 7s / 10);
         -o-transition-delay: calc(.5s + 7s / 10);
         transition-delay: calc(.5s + 7s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(8) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(8) {
         -webkit-transition-delay: -webkit-calc(.5s + 8s / 10);
         -o-transition-delay: calc(.5s + 8s / 10);
         transition-delay: calc(.5s + 8s / 10); }
-      .about__wrapper.js-modal--is-open .about__content > *:nth-child(9) {
+      .about__wrapper.js-modal--is-open .about__content > * > *:nth-child(9) {
         -webkit-transition-delay: -webkit-calc(.5s + 9s / 10);
         -o-transition-delay: calc(.5s + 9s / 10);
         transition-delay: calc(.5s + 9s / 10); }
