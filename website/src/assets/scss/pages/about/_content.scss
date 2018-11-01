@@ -1,14 +1,15 @@
 .about__wrapper {
-    * {
-        margin: 0 auto;
+    @include mq(desktop) {
+        font-size: 1.6rem;
     }
 
-    p,
-    h2,
-    h3,
-    small,
-    ul {
-        max-width: 53.4rem;
+    * {
+        margin: 0 auto;
+        line-height: inherit;
+    }
+
+    p {
+        line-height: 200%;
     }
 
     p+p {
@@ -37,30 +38,9 @@
 
     img {
         display: block;
-        max-width: 80rem;
-        width: 100%;
 
         @include mq(mobile) {
             max-width: 40rem;
-        }
-    }
-
-    ul+ul {
-        margin-top: 4rem;
-    }
-
-    ul li {
-        margin-bottom: 1rem;
-        position: relative;
-        padding-left: 3rem;
-
-        &::before {
-            display: block;
-            content: '—';
-            position: absolute;
-            left: 0rem;
-            top: 50%;
-            transform: translateY(-50%);
         }
     }
 }

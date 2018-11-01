@@ -259,26 +259,23 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                     e.preventDefault();
                     var target = trigger.dataset.target;
 
-                    var _loop2 = function _loop2(_i) {
-                        var modal = modals[_i];
-                        var id = modal.dataset.id;
+                    for (var _i = 0; _i < modals.length; _i++) {
+                        var _modal = modals[_i];
+                        var id = _modal.dataset.id;
 
                         // Get height
-                        modal.style.height = window.innerHeight + "px";
+                        _modal.style.height = window.innerHeight + "px";
 
-                        if (target == id) modal.classList.add(openClass), body.classList.add(noScrollClass), cursor.classList.add(closeCursor), modal.querySelector('.about__content').scrollTo(0, 0);
+                        if (target == id) _modal.classList.add(openClass), body.classList.add(noScrollClass), _modal.querySelector('.about__content').scrollTo(0, 0);
+                        // cursor.classList.add(closeCursor),
 
-                        if (_helpers_isDesktop__WEBPACK_IMPORTED_MODULE_0__["default"]) {
-                            if (modal.classList.contains(openClass)) modal.addEventListener('click', function (e) {
-                                modal.classList.remove(openClass);
-                                cursor.classList.remove(closeCursor);
-                                body.classList.remove(noScrollClass);
-                            });
-                        }
-                    };
-
-                    for (var _i = 0; _i < modals.length; _i++) {
-                        _loop2(_i);
+                        // if (isDesktop) {
+                        //     if (modal.classList.contains(openClass)) modal.addEventListener('click', (e) => {
+                        //         modal.classList.remove(openClass)
+                        //         cursor.classList.remove(closeCursor)
+                        //         body.classList.remove(noScrollClass)
+                        //     })
+                        // }
                     }
 
                     for (var _i2 = 0; _i2 < closes.length; _i2++) {
@@ -287,8 +284,8 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                             e.preventDefault();
 
                             for (var _i3 = 0; _i3 < modals.length; _i3++) {
-                                var _modal = modals[_i3];
-                                if (_modal.classList.contains(openClass)) _modal.classList.remove(openClass), body.classList.remove(noScrollClass), cursor.classList.remove(closeCursor);
+                                var _modal2 = modals[_i3];
+                                if (_modal2.classList.contains(openClass)) _modal2.classList.remove(openClass), body.classList.remove(noScrollClass), cursor.classList.remove(closeCursor);
                             }
                         });
                     }
@@ -325,7 +322,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
             if (!_helpers_isDesktop__WEBPACK_IMPORTED_MODULE_0__["default"]) return;
 
-            var _loop3 = function _loop3(i) {
+            var _loop2 = function _loop2(i) {
                 var el = links[i];
                 var url = el.href;
 
@@ -341,7 +338,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             };
 
             for (var i = 0; i < links.length; i++) {
-                _loop3(i);
+                _loop2(i);
             }
         }();
 

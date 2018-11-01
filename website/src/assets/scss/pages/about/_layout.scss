@@ -1,4 +1,4 @@
-@import "visibility", "content", "close";
+@import "visibility", "content", "close", "bg", "skills";
 
 .about {
     &__wrapper {
@@ -20,9 +20,13 @@
         -webkit-overflow-scrolling: touch;
         border: 1rem solid #fff;
 
-
         @include mq(desktop) {
             border-width: 4rem;
+        }
+
+        >* {
+            max-width: 53.2rem;
+            width: 100%;
         }
     }
 
@@ -37,10 +41,6 @@
 
         * {
             color: inherit;
-
-            @include mq(desktop) {
-                font-size: 1.8rem;
-            }
         }
     }
 }

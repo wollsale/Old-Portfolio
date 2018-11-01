@@ -24,15 +24,19 @@ const modal = (() => {
                 // Get height
                 modal.style.height = window.innerHeight + "px";
 
-                if (target == id) modal.classList.add(openClass), body.classList.add(noScrollClass), cursor.classList.add(closeCursor), modal.querySelector('.about__content').scrollTo(0, 0);
+                if (target == id)
+                    modal.classList.add(openClass),
+                    body.classList.add(noScrollClass),
+                    modal.querySelector('.about__content').scrollTo(0, 0);
+                // cursor.classList.add(closeCursor),
 
-                if (isDesktop) {
-                    if (modal.classList.contains(openClass)) modal.addEventListener('click', (e) => {
-                        modal.classList.remove(openClass)
-                        cursor.classList.remove(closeCursor)
-                        body.classList.remove(noScrollClass)
-                    })
-                }
+                // if (isDesktop) {
+                //     if (modal.classList.contains(openClass)) modal.addEventListener('click', (e) => {
+                //         modal.classList.remove(openClass)
+                //         cursor.classList.remove(closeCursor)
+                //         body.classList.remove(noScrollClass)
+                //     })
+                // }
             }
 
             for (let i = 0; i < closes.length; i++) {
