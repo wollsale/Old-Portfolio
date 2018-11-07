@@ -191,6 +191,12 @@
             top: 4rem;
         }
     }
+
+    &__item--rab .projects__img {
+        box-shadow: none;
+        min-width: calc(100% + 8rem);
+        transform: translateX(-4rem);
+    }
 }
 
 

@@ -46,7 +46,7 @@ $CONTENT_COLOR : $blue;
         height: 100%;
 
         @include mq(mobile) {
-            padding: 1rem;
+            padding: 2rem 1rem;
         }
 
         color: $CONTENT_COLOR;
@@ -81,7 +81,7 @@ $CONTENT_COLOR : $blue;
         h4 {
             font-weight: 500;
 
-            font-size: 1.2rem;
+            font-size: 1.4rem;
 
             @include mq(desktop) {
                 font-size: 1.6rem;

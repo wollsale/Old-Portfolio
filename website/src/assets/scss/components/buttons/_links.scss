@@ -1,0 +1,29 @@
+$EASING_VALUE : cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.link {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    z-index: 0;
+
+    &::after {
+        display: block;
+        content: '';
+
+        width: 100%;
+        height: 1rem;
+
+        position: absolute;
+        z-index: -1;
+        background: $intermBlue;
+        bottom: -.3rem;
+        transform: scaleY(1);
+        transform-origin: center bottom;
+        transition: transform .2s $EASING_VALUE;
+    }
+
+    &:hover::after {
+        transform: scaleY(2.2);
+        transition: transform .1s $EASING_VALUE;
+    }
+}

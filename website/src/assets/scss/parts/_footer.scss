@@ -1,3 +1,40 @@
 footer {
     margin-top: 25rem;
 }
+
+
+// HOMEPAGE
+
+$BACKGROUND : $lightBlue;
+
+.homepage footer {
+    background-color: $BACKGROUND;
+    border-top: 1px solid $intermBlue;
+    padding: 20rem 2rem;
+
+    @include mq(mobile) {
+        display: none;
+    }
+}
+
+.contact {
+    &__descr {
+        color: $blue;
+
+        @include mq(desktop) {
+            text-align: center;
+        }
+
+        &+& {
+            margin-top: 2rem;
+        }
+
+        a {
+            font-weight: 500;
+        }
+
+        * {
+            color: inherit;
+        }
+    }
+}
