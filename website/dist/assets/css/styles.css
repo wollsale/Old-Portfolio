@@ -192,7 +192,8 @@ small {
 
 .button--primary, .button--secondary {
   background-color: #EEF5FF;
-  color: #2F80ED; }
+  color: #2F80ED;
+  border-bottom: 3px solid #D0E4FF; }
   .button--primary::before, .button--secondary::before {
     width: 1.6rem;
     height: 1.3rem;
